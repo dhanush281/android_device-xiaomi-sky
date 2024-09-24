@@ -5,4 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_sky.mk
+    $(LOCAL_DIR)/euclid_sky.mk
+
+COMMON_LUNCH_CHOICES := \
+    euclid_sky-ap2a-eng \
+    euclid_sky-ap2a-userdebug \
+    euclid_sky-ap2a-user
