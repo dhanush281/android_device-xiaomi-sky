@@ -635,3 +635,6 @@ PRODUCT_PACKAGES += \
 
 # Google Camera
 $(call inherit-product, vendor/xiaomi/sky-gcam/Camera-vendor.mk)
+
+# signed flag euclid
+-include vendor/euclid-priv/keys/keys.mk
