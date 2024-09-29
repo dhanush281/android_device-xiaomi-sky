@@ -512,7 +512,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces \
     hardware/google/pixel \
     hardware/xiaomi \
-    hardware/euclid/interfaces/power-libperfmgr \
+    hardware/lineage/interfaces/power-libperfmgr \
     hardware/qcom-caf/common/libqti-perfd-client
 
 # SQLite
@@ -638,6 +638,3 @@ PRODUCT_PACKAGES += \
 
 # Google Camera
 $(call inherit-product, vendor/xiaomi/sky-gcam/Camera-vendor.mk)
-
-# signed flag euclid
--include vendor/euclid-priv/keys/keys.mk

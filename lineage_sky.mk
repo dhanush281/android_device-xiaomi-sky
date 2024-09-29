@@ -12,8 +12,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 # Configure full_base_telephony.mk
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit common euclidOS configurations
-$(call inherit-product, vendor/euclid/config/common_full_phone.mk)
+# Inherit common EverestOS configurations
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Inherit device configurations
 $(call inherit-product, $(DEVICE_PATH)/device.mk)
@@ -23,26 +23,26 @@ $(call inherit-product, vendor/xiaomi/sky/sky-vendor.mk)
 
 ## Device identifier
 PRODUCT_DEVICE := sky
-PRODUCT_NAME := euclid_sky
+PRODUCT_NAME := lineage_sky
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := 23076RN4BI
 PRODUCT_MANUFACTURER := Xiaomi
 
-#Maintainer
-EUCLID_BUILD_TYPE := OFFICIAL
-EUCLID_MAINTAINER := Dhanush
-#Gapps
-EUCLID_GAPPS := true
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
-TARGET_INCLUDE_GOOGLE_DIALER := true
+# Maintainer name for Everest
+EVEREST_MAINTAINER := Dhanush
+TARGET_USES_BLUR_RECENT := false
+TARGET_PREBUILT_BCR := true
 
-#UDFPS
+# Adding Blur support
+TARGET_SUPPORTS_BLUR := false
+
+# For UDFPS devices
+TARGET_HAS_UDFPS := false
+
 EXTRA_UDFPS_ANIMATIONS := false
 
-#Misc.
-TARGET_SUPPORTS_TOUCHGESTURES := false
-
-TARGET_SUPPORTS_BLUR := false
+# Build GAPPS\Vanilla
+WITH_GAPPS := true
 
 # GMS
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
