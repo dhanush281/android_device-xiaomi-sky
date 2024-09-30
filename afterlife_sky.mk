@@ -12,8 +12,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 # Configure full_base_telephony.mk
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit common euclidOS configurations
-$(call inherit-product, vendor/euclid/config/common_full_phone.mk)
+# Inherit common lineageOS stuff configurations
+$(call inherit-product, vendor/afterlife/config/common_full_phone.mk)
 
 # Inherit device configurations
 $(call inherit-product, $(DEVICE_PATH)/device.mk)
@@ -23,25 +23,21 @@ $(call inherit-product, vendor/xiaomi/sky/sky-vendor.mk)
 
 ## Device identifier
 PRODUCT_DEVICE := sky
-PRODUCT_NAME := euclid_sky
+PRODUCT_NAME := afterlife_sky
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := 23076RN4BI
 PRODUCT_MANUFACTURER := Xiaomi
 
-#Maintainer
-EUCLID_BUILD_TYPE := OFFICIAL
-EUCLID_MAINTAINER := Dhanush
-#Gapps
-EUCLID_GAPPS := true
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
-TARGET_INCLUDE_GOOGLE_DIALER := true
+# flags
+TARGET_FACE_UNLOCK_SUPPORTED := true
+USE_PIXEL_CHARGING := true
 
 #UDFPS
 EXTRA_UDFPS_ANIMATIONS := false
 
 #Misc.
 TARGET_SUPPORTS_TOUCHGESTURES := false
-
+TARGET_SUPPORTS_QUICK_TAP := false
 TARGET_SUPPORTS_BLUR := false
 
 # GMS

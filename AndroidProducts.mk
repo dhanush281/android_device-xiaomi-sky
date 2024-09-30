@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/euclid_sky.mk
+    $(LOCAL_DIR)/afterlife_sky.mk
 
 COMMON_LUNCH_CHOICES := \
-    euclid_sky-ap2a-eng \
-    euclid_sky-ap2a-userdebug \
-    euclid_sky-ap2a-user
+    afterlife_sky-ap2a-eng \
+    afterlife_sky-ap2a-userdebug \
+    afterlife_sky-ap2a-user
