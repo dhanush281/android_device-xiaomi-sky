@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_sky.mk
+    $(LOCAL_DIR)/lineage_sky.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_sky-ap2a-eng \
+    lineage_sky-ap2a-eng \
     aosp_sky-ap2a-userdebug \
     aosp_sky-ap2a-user

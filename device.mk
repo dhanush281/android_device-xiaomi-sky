@@ -656,3 +656,6 @@ PRODUCT_PACKAGES += \
 
 # Google Camera
 $(call inherit-product, vendor/xiaomi/sky-gcam/Camera-vendor.mk)
+
+# Signing
+-include vendor/lineage-priv/keys/keys.mk
