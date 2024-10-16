@@ -12,8 +12,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit_only.mk)
 # Configure full_base_telephony.mk
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit common EverestOS configurations
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit common aosp configurations
+$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 
 # Inherit device configurations
 $(call inherit-product, $(DEVICE_PATH)/device.mk)
@@ -23,15 +23,13 @@ $(call inherit-product, vendor/xiaomi/sky/sky-vendor.mk)
 
 ## Device identifier
 PRODUCT_DEVICE := sky
-PRODUCT_NAME := lineage_sky
+PRODUCT_NAME := aosp_sky
 PRODUCT_BRAND := Redmi
 PRODUCT_MODEL := 23076RN4BI
 PRODUCT_MANUFACTURER := Xiaomi
 
-# Maintainer name for Everest
-EVEREST_MAINTAINER := Dhanush
+
 TARGET_USES_BLUR_RECENT := false
-TARGET_PREBUILT_BCR := true
 
 # Adding Blur support
 TARGET_SUPPORTS_BLUR := false
@@ -41,12 +39,9 @@ TARGET_HAS_UDFPS := false
 
 EXTRA_UDFPS_ANIMATIONS := false
 
-# Build GAPPS
-WITH_GAPPS := true
-
-TARGET_PREBUILT_LAWNCHAIR_LAUNCHER := false
-
-TARGET_DEFAULT_PIXEL_LAUNCHER := false
+# SkylineUI Maintainer Flags
+SKYLINEUI_MAINTAINER := Dhanush
+CUSTOM_BUILD_TYPE := UNOFFICIAL
 
 # GMS
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
